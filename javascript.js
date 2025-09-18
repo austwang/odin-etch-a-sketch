@@ -13,3 +13,9 @@ for (let i = 0; i < 16; i++) {
     }
     container.appendChild(row);
 }
+
+button = document.querySelector("button");
+
+button.addEventListener("click", () => {
+    const gridSize = prompt("Enter the number of squares per side for the new grid", 16);
+});
