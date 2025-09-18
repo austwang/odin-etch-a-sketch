@@ -20,6 +20,10 @@ button = document.querySelector("button");
 
 button.addEventListener("click", () => {
     const gridSize = prompt("Enter the number of squares per side for the new grid", 16);
+    while (container.hasChildNodes()) {
+        container.removeChild(container.children[0]);
+    }
+    generateGrid(gridSize);
 });
 
 generateGrid(16);
