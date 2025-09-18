@@ -1,0 +1,9 @@
+.gridRow {
+    display: flex;
+}
+
+.gridElement {
+    border: 2px solid black;
+    padding: 16px;
+    margin: 2px;
+}
