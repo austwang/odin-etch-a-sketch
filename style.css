@@ -1,13 +1,19 @@
 .container {
+    display: flex;
+    flex-direction: column;
     border: 8px solid red;
+    width: 960px;
+    height: 960px;
 }
 
 .gridRow {
     display: flex;
+    flex: 1;
 }
 
 .gridElement {
     border: 2px solid black;
+    flex: 1;
     padding: 4px;
     margin: 1px;
 }
