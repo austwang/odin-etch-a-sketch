@@ -19,7 +19,10 @@ function generateGrid(gridSize) {
 button = document.querySelector("button");
 
 button.addEventListener("click", () => {
-    const gridSize = prompt("Enter the number of squares per side for the new grid", 16);
+    let gridSize = prompt("Enter the number of squares per side for the new grid (Max size: 100)", 16);
+    if (gridSize > 100) {
+        gridSize = 100;
+    }
     while (container.hasChildNodes()) {
         container.removeChild(container.children[0]);
     }
