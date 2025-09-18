@@ -1,5 +1,9 @@
 container = document.querySelector(".container");
 
+function randomColorValue() {
+    return Math.floor(Math.random() * 255);
+}
+
 function generateGrid(gridSize) {
     for (let i = 0; i < gridSize; i++) {
         const row = document.createElement("div");
@@ -8,7 +12,7 @@ function generateGrid(gridSize) {
             const element = document.createElement("div");
             element.classList.add("gridElement");
             element.addEventListener("mouseover", () => {
-                element.style.backgroundColor = "black";
+                element.style.backgroundColor = `rgb(${randomColorValue()},${randomColorValue()},${randomColorValue()})`;
             });
             row.appendChild(element);
         }
