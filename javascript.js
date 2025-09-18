@@ -23,10 +23,12 @@ button.addEventListener("click", () => {
     if (gridSize > 100) {
         gridSize = 100;
     }
-    while (container.hasChildNodes()) {
-        container.removeChild(container.children[0]);
+    if (gridSize !== null) {
+        while (container.hasChildNodes()) {
+            container.removeChild(container.children[0]);
+        }
+        generateGrid(gridSize);
     }
-    generateGrid(gridSize);
 });
 
 generateGrid(16);
