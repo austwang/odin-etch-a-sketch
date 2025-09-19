@@ -11,8 +11,10 @@ function generateGrid(gridSize) {
         for (let j = 0; j < gridSize; j++) {
             const element = document.createElement("div");
             element.classList.add("gridElement");
+            element.style.opacity = 0;
             element.addEventListener("mouseover", () => {
                 element.style.backgroundColor = `rgb(${randomColorValue()},${randomColorValue()},${randomColorValue()})`;
+                element.style.opacity = parseFloat(element.style.opacity) + 0.1;
             });
             row.appendChild(element);
         }
